@@ -4,6 +4,7 @@ import {NumberButton} from "./components/NumberButton"
 import {ClearButton} from "./components/ClearButton";
 import {PlusButton} from "./components/PlusButton";
 import {EqualButton} from "./components/EqualButton";
+import {MinusButton} from "./components/MinusButton";
 
 function App() {
 
@@ -44,7 +45,7 @@ function App() {
                     <NumberButton number={4} result={result} setResult={setResult} operation={operation} setOperation={setOperation} />
                     <NumberButton number={5} result={result} setResult={setResult} operation={operation} setOperation={setOperation} />
                     <NumberButton number={6} result={result} setResult={setResult} operation={operation} setOperation={setOperation} />
-                    <Button color="secondary" variant="contained" size="large">-</Button>
+                    <MinusButton result={result} setResult={setResult} tmpResult={tmpResult} setTmpResult={setTmpResult} operation={operation} setOperation={setOperation} />
                 </div>
                 <div>
                     <NumberButton number={1} result={result} setResult={setResult} operation={operation} setOperation={setOperation} />
