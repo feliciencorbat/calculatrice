@@ -2,10 +2,14 @@ import {Box, Button, TextField} from "@mui/material";
 import {useState} from "react";
 import {NumberButton} from "./components/NumberButton"
 import {ClearButton} from "./components/ClearButton";
+import {PlusButton} from "./components/PlusButton";
+import {EqualButton} from "./components/EqualButton";
 
 function App() {
 
     const [result, setResult] = useState(0);
+    const [tmpResult, setTmpResult] = useState(0);
+    const [operation, setOperation] = useState(null);
 
     return (
     <div className="App">
@@ -29,30 +33,30 @@ function App() {
                     />
                 </div>
                 <div>
-                    <ClearButton setResult={setResult} />
+                    <ClearButton setResult={setResult} setTmpResult={setTmpResult} setOperation={setOperation}/>
                 </div>
                 <div>
-                    <NumberButton number={7} result={result} setResult={setResult} />
-                    <NumberButton number={8} result={result} setResult={setResult} />
-                    <NumberButton number={9} result={result} setResult={setResult} />
+                    <NumberButton number={7} result={result} setResult={setResult} operation={operation} setOperation={setOperation} />
+                    <NumberButton number={8} result={result} setResult={setResult} operation={operation} setOperation={setOperation} />
+                    <NumberButton number={9} result={result} setResult={setResult} operation={operation} setOperation={setOperation} />
                 </div>
                 <div>
-                    <NumberButton number={4} result={result} setResult={setResult} />
-                    <NumberButton number={5} result={result} setResult={setResult} />
-                    <NumberButton number={6} result={result} setResult={setResult} />
+                    <NumberButton number={4} result={result} setResult={setResult} operation={operation} setOperation={setOperation} />
+                    <NumberButton number={5} result={result} setResult={setResult} operation={operation} setOperation={setOperation} />
+                    <NumberButton number={6} result={result} setResult={setResult} operation={operation} setOperation={setOperation} />
                     <Button color="secondary" variant="contained" size="large">-</Button>
                 </div>
                 <div>
-                    <NumberButton number={1} result={result} setResult={setResult} />
-                    <NumberButton number={2} result={result} setResult={setResult} />
-                    <NumberButton number={3} result={result} setResult={setResult} />
-                    <Button color="secondary" variant="contained" size="large">+</Button>
+                    <NumberButton number={1} result={result} setResult={setResult} operation={operation} setOperation={setOperation} />
+                    <NumberButton number={2} result={result} setResult={setResult} operation={operation} setOperation={setOperation} />
+                    <NumberButton number={3} result={result} setResult={setResult} operation={operation} setOperation={setOperation} />
+                    <PlusButton result={result} setResult={setResult} tmpResult={tmpResult} setTmpResult={setTmpResult} operation={operation} setOperation={setOperation} />
                 </div>
                 <div>
-                    <NumberButton number={0} result={result} setResult={setResult} />
+                    <NumberButton number={0} result={result} setResult={setResult} operation={operation} setOperation={setOperation} />
                     <Button variant="contained">.</Button>
                     <Button variant="contained">-/+</Button>
-                    <Button color="success" variant="contained" size="large">=</Button>
+                    <EqualButton result={result} setResult={setResult} tmpResult={tmpResult} setTmpResult={setTmpResult} operation={operation} setOperation={setOperation} />
                 </div>
             </Box>
     </div>

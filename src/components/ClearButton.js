@@ -1,8 +1,10 @@
 import {Button} from "@mui/material";
 
-export const ClearButton = ({setResult}) => {
+export const ClearButton = ({setResult, setTmpResult, setOperation}) => {
     function clearResult() {
         setResult(0)
+        setTmpResult(0)
+        setOperation(null)
     }
 
     return (
