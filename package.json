@@ -1,6 +1,7 @@
 {
   "name": "calculatrice",
   "version": "0.1.0",
+  "homepage": "https://feliciencorbat.github.io/calculatrice",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.5",
