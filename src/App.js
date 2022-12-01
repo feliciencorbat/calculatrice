@@ -5,6 +5,7 @@ import {ClearButton} from "./components/ClearButton";
 import {PlusButton} from "./components/PlusButton";
 import {EqualButton} from "./components/EqualButton";
 import {MinusButton} from "./components/MinusButton";
+import {ReverseButton} from "./components/ReverseButton";
 
 function App() {
 
@@ -56,7 +57,7 @@ function App() {
                 <div>
                     <NumberButton number={0} result={result} setResult={setResult} operation={operation} setOperation={setOperation} />
                     <Button variant="contained">.</Button>
-                    <Button variant="contained">-/+</Button>
+                    <ReverseButton result={result} setResult={setResult} />
                     <EqualButton result={result} setResult={setResult} tmpResult={tmpResult} setTmpResult={setTmpResult} operation={operation} setOperation={setOperation} />
                 </div>
             </Box>
