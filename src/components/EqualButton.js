@@ -3,11 +3,11 @@ import {Button} from "@mui/material";
 export const EqualButton = ({result, setResult, tmpResult, setTmpResult, operation, setOperation, setHasComma}) => {
     function equalResult() {
         if (operation === "+") {
-            setResult(tmpResult + result)
+            setResult(tmpResult + Number(result))
         } else if (operation === "-") {
-            setResult(tmpResult - result)
+            setResult(tmpResult - Number(result))
         } else {
-            setResult(result)
+            setResult(Number(result))
         }
 
         setOperation("=")

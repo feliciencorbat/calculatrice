@@ -3,11 +3,11 @@ import {Button} from "@mui/material";
 export const MinusButton = ({result, setResult, tmpResult, setTmpResult, operation, setOperation, setComma, setHasComma}) => {
     function minusResult() {
         if (operation === "+") {
-            setTmpResult(tmpResult + result)
+            setTmpResult(tmpResult + Number(result))
         } else if (operation === "-") {
-            setTmpResult(tmpResult - result)
+            setTmpResult(tmpResult - Number(result))
         } else {
-            setTmpResult(result)
+            setTmpResult(Number(result))
         }
 
         setOperation("-")

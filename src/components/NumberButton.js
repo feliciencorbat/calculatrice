@@ -1,19 +1,20 @@
 import {Button} from "@mui/material";
 
-export const NumberButton = ({number, result, setResult, operation, setOperation, comma, setComma}) => {
+export const NumberButton = ({number, result, setResult, operation, setOperation, comma, setComma, hasComma}) => {
     function addNumber() {
         if (operation === "=") {
-            setResult(number)
+            setResult(Number(number))
             setOperation(null)
         } else {
             if (comma) {
-                setResult(Number('' + result + '.' + number))
+                setResult('' + result + '.' + number)
                 setComma(false)
+            } else if (hasComma) {
+                setResult('' + result + number)
             } else {
                 setResult(Number('' + result + number))
             }
         }
-
     }
 
     return (

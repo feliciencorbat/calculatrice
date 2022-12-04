@@ -41,24 +41,24 @@ function App() {
                     <ClearButton setResult={setResult} setTmpResult={setTmpResult} setOperation={setOperation} setComma={setComma} setHasComma={setHasComma}/>
                 </div>
                 <div>
-                    <NumberButton number={7} result={result} setResult={setResult} operation={operation} setOperation={setOperation} comma={comma} setComma={setComma} />
-                    <NumberButton number={8} result={result} setResult={setResult} operation={operation} setOperation={setOperation} comma={comma} setComma={setComma} />
-                    <NumberButton number={9} result={result} setResult={setResult} operation={operation} setOperation={setOperation} comma={comma} setComma={setComma} />
+                    <NumberButton number={7} result={result} setResult={setResult} operation={operation} setOperation={setOperation} comma={comma} setComma={setComma} hasComma={hasComma} />
+                    <NumberButton number={8} result={result} setResult={setResult} operation={operation} setOperation={setOperation} comma={comma} setComma={setComma} hasComma={hasComma} />
+                    <NumberButton number={9} result={result} setResult={setResult} operation={operation} setOperation={setOperation} comma={comma} setComma={setComma} hasComma={hasComma} />
                 </div>
                 <div>
-                    <NumberButton number={4} result={result} setResult={setResult} operation={operation} setOperation={setOperation} comma={comma} setComma={setComma} />
-                    <NumberButton number={5} result={result} setResult={setResult} operation={operation} setOperation={setOperation} comma={comma} setComma={setComma} />
-                    <NumberButton number={6} result={result} setResult={setResult} operation={operation} setOperation={setOperation} comma={comma} setComma={setComma} />
+                    <NumberButton number={4} result={result} setResult={setResult} operation={operation} setOperation={setOperation} comma={comma} setComma={setComma} hasComma={hasComma} />
+                    <NumberButton number={5} result={result} setResult={setResult} operation={operation} setOperation={setOperation} comma={comma} setComma={setComma} hasComma={hasComma} />
+                    <NumberButton number={6} result={result} setResult={setResult} operation={operation} setOperation={setOperation} comma={comma} setComma={setComma} hasComma={hasComma} />
                     <MinusButton result={result} setResult={setResult} tmpResult={tmpResult} setTmpResult={setTmpResult} operation={operation} setOperation={setOperation} setComma={setComma} setHasComma={setHasComma} />
                 </div>
                 <div>
-                    <NumberButton number={1} result={result} setResult={setResult} operation={operation} setOperation={setOperation} comma={comma} setComma={setComma} />
-                    <NumberButton number={2} result={result} setResult={setResult} operation={operation} setOperation={setOperation} comma={comma} setComma={setComma} />
-                    <NumberButton number={3} result={result} setResult={setResult} operation={operation} setOperation={setOperation} comma={comma} setComma={setComma} />
+                    <NumberButton number={1} result={result} setResult={setResult} operation={operation} setOperation={setOperation} comma={comma} setComma={setComma} hasComma={hasComma} />
+                    <NumberButton number={2} result={result} setResult={setResult} operation={operation} setOperation={setOperation} comma={comma} setComma={setComma} hasComma={hasComma} />
+                    <NumberButton number={3} result={result} setResult={setResult} operation={operation} setOperation={setOperation} comma={comma} setComma={setComma} hasComma={hasComma} />
                     <PlusButton result={result} setResult={setResult} tmpResult={tmpResult} setTmpResult={setTmpResult} operation={operation} setOperation={setOperation} setComma={setComma} setHasComma={setHasComma} />
                 </div>
                 <div>
-                    <NumberButton number={0} result={result} setResult={setResult} operation={operation} setOperation={setOperation} comma={comma} setComma={setComma} />
+                    <NumberButton number={0} result={result} setResult={setResult} operation={operation} setOperation={setOperation} comma={comma} setComma={setComma} hasComma={hasComma} />
                     <CommaButton setComma={setComma} hasComma={hasComma} setHasComma={setHasComma} />
                     <ReverseButton result={result} setResult={setResult} />
                     <EqualButton result={result} setResult={setResult} tmpResult={tmpResult} setTmpResult={setTmpResult} operation={operation} setOperation={setOperation} setHasComma={setHasComma} />
