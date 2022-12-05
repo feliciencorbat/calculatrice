@@ -1,11 +1,12 @@
 import {Button} from "@mui/material";
+import bigDecimal from "js-big-decimal";
 
 export const EqualButton = ({result, setResult, tmpResult, setTmpResult, operation, setOperation, setHasComma}) => {
     function equalResult() {
         if (operation === "+") {
-            setResult(tmpResult + Number(result))
+            setResult(Number(bigDecimal.add(tmpResult, result)))
         } else if (operation === "-") {
-            setResult(tmpResult - Number(result))
+            setResult(Number(bigDecimal.subtract(tmpResult, result)))
         } else {
             setResult(Number(result))
         }
